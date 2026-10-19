@@ -1,4 +1,4 @@
-"""Python setup.py for project_name package"""
+"""Python setup.py for prueba package"""
 import io
 import os
 from setuptools import find_packages, setup
@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 def read(*paths, **kwargs):
     """Read the contents of a text file safely.
-    >>> read("project_name", "VERSION")
+    >>> read("prueba", "VERSION")
     '0.1.0'
     >>> read("README.md")
     ...
@@ -30,17 +30,17 @@ def read_requirements(path):
 
 
 setup(
-    name="project_name",
-    version=read("project_name", "VERSION"),
-    description="project_description",
-    url="https://github.com/author_name/project_urlname/",
+    name="prueba",
+    version=read("prueba", "VERSION"),
+    description="Awesome prueba created by pgarciam12",
+    url="https://github.com/pgarciam12/prueba/",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
-    author="author_name",
+    author="pgarciam12",
     packages=find_packages(exclude=["tests", ".github"]),
     install_requires=read_requirements("requirements.txt"),
     entry_points={
-        "console_scripts": ["project_name = project_name.__main__:main"]
+        "console_scripts": ["prueba = prueba.__main__:main"]
     },
     extras_require={"test": read_requirements("requirements-test.txt")},
 )
